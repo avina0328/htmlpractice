@@ -88,37 +88,7 @@
     left: -5px;
     top:-5px;
 }
-.ad img{
-    width: 400px;
-    opacity: .8;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    transition: 0.5s;
-    border: 2px double #ccc;
-}
-.ad img:hover{
-    opacity: 1;
-}
-.ad{
-    width: 100%;
-    position: relative;
-    border: 5px solid #000000;
-}
-.ad .tab{
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    position: fixed;
-    background-color: red;
-    font-size: 10px;
-    bottom: 190px;
-    left: 390px;
-    z-index: 1;
-}
+
 .column-1 {
     animation: fadeIn ease 1.5s;
     -webkit-animation: fadeIn ease 1.5s;

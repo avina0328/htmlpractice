@@ -99,11 +99,11 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
 </div>
-<div class="ad">
+<div id="ad" class="ad">
     <div class="full-screen">
     
     
-    <button class="tab" type="button">X</button>
+    <button  class="tab"  onClick="closeAd()" type="button">X</button>
     <img src="https://static.accupass.com/userupload/afac6f3628dd4977a97cc8aca24a175b.jpg" alt="">
     </div>
 </div>
@@ -112,11 +112,20 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $('.tab').click(function(){
-            $('.ad').hide();
-        })                          
-    })                                                            
+    // Jquery寫法
+
+    // $(document).ready(function(){
+    //     $('.tab').click(function(){
+    //         $('.ad').fadeOut();
+    //     })                          
+    // })  
+
+    // JavaScript寫法
+    
+    function closeAd(){
+    var close = document.getElementById("ad")        
+    close.style.display="none";
+    }
     </script>                       
 
 </body>

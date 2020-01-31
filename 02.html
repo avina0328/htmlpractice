@@ -7,8 +7,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
-        
+        .full-screen.lgimg{
+          display: flex;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+            
+        }
+        .full-screen {
+          display: none;
+          
+        }
+        .full-screen img{
+            width: 800px;
+            height: 550px;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            
+        }
+
+        @media screen and (max-width: 768px){
+            .full-screen.lgimg img{
+                width: 400px;
+                height: 300px;
+            }
+        }
     </style>
 
 </head>
@@ -78,6 +107,20 @@
             </p>
         </div> 
         </div>
-
+        <div class="full-screen">
+            <img src="https://i0.wp.com/free.com.tw/blog/wp-content/uploads/2014/05/%E8%80%81%E6%AD%B7%E5%8F%B2%E7%85%A7%E7%89%87high-quality-photo.jpg?resize=640%2C424&ssl=1" alt="">
+        </div>
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.column-1 img').click(function(){
+                    $('.full-screen').addClass('lgimg');
+                });
+                $('.full-screen').click(function(){
+                    $('.full-screen').removeClass('lgimg')
+                })                          
+            })                                                            
+            </script>        
 </body>
 </html>

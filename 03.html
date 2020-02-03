@@ -24,9 +24,9 @@
             transition: 0.5s;
             
         }
-        .ad img:hover{
+        /* .ad img:hover{
             opacity: 1;
-        }
+        } */
         .ad{
             width: 100%;
             position: relative;
@@ -46,6 +46,20 @@
             left: 390px;
             z-index: 1;
         }
+        .content-btn{
+            width: 150px;
+            height: 25px;
+            margin: 20px;
+            background-color: rgb(255, 232, 170);
+            border: 2px solid #000;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .hide{
+            display: none;
+            
+        }
+       
     </style>
 </head>
 <body>
@@ -54,6 +68,7 @@
         <a href="02.html">P2</a>
         <a href="03.html">P3</a>
         <a href="04.html">P4</a>
+        <a href="05.html">P5</a>
     </nav>
     <div class="title">第三頁</div>
    
@@ -88,23 +103,38 @@
     </div>
 </div>
 <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</p>
+    <button  class="content-btn" onclick="toggleMenu(1)">CONTENT-1</button>
+    <ul id="menu-1" class="menu-1">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+    </ul>
+   
 </div>
-<div id="ad" class="ad">
+<div class="content">
+    <button  class="content-btn" onclick="toggleMenu(2)">CONTENT-2</button>
+    <ul id="menu-2" class="menu-2">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+    </ul>
+   
+</div>
+<div class="content">
+    <button  class="content-btn" onclick="toggleMenu(3)">CONTENT-3</button>
+    <ul id="menu-3" class="menu-3">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+    </ul>
+   
+</div>
+<div id="ad" class="ad" >
     <div class="full-screen">
     
     
     <button  class="tab"  onClick="closeAd()" type="button">X</button>
-    <img src="https://static.accupass.com/userupload/afac6f3628dd4977a97cc8aca24a175b.jpg" alt="">
+    <img onmouseover="opa(this)" onmouseout="out(this)" src="https://static.accupass.com/userupload/afac6f3628dd4977a97cc8aca24a175b.jpg" alt="">
     </div>
 </div>
 
@@ -120,8 +150,27 @@
     //     })                          
     // })  
 
+
+        // $(document).ready(function(){ 
+        //     $('.content-btn').click(function(){        尚未完成
+        //         $('#menu-1').toggle()
+        //     })
+        // })
+
+
     // JavaScript寫法
-    
+
+    function opa(element){
+        element.style.opacity="1"
+    }
+    function out(element){
+        element.style.opacity=".8"
+    }
+    function toggleMenu(number){
+        var menu = document.getElementById("menu-"+number)
+        menu.classList.toggle("hide")
+
+    }
     function closeAd(){
     var close = document.getElementById("ad")        
     close.style.display="none";

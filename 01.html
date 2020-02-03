@@ -22,12 +22,13 @@
         margin: auto;
         width: 750px;
         display: flex;
+        padding: 30px 0px;
     }
     .about .item{
         width: 200px;
         text-align: center;
         margin:auto;
-        padding: 15px;
+        padding: 15px 40px;
         font-size: 10px;
         
     }
@@ -77,7 +78,7 @@
         .container{
             width: 100%;
             display: inline-block;
-            padding: 30px 0px;
+            padding: 50px 0px;
             margin: auto;
         }
         .container .item{
@@ -88,7 +89,7 @@
             width: 100px;
         }
         .container .item {
-
+            
             font-size: 17px;
         }
         .product .wrap{
@@ -113,6 +114,7 @@
         <a href="02.html">P2</a>
         <a href="03.html">P3</a>
         <a href="04.html">P4</a>
+        <a href="05.html">P5</a>
     </nav>
    <div class="banner">
        <img src="https://exfast.me/wp-content/uploads/2019/04/1554182762-cddf42691119d44059a16a4095047a33-1140x600.jpg" alt="">
@@ -146,7 +148,16 @@
        <div class="item-txt">
             <h3>title</h3>
             <p>sdfsdfsdfs sdfsdfsdfsdf dfghfjfghhgj dfggdg Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut error, unde, ducimus facere molestiae quasi rerum adipisci impedit obcaecati odit soluta dolore, fuga voluptate natus voluptatem eum? Harum, voluptatum mollitia.</p>
-    </div>
+            <button id="next" onclick="next();"style="width: 150px; margin:30px 0px 0px 210px;">NEXT PAGE</button>
+        </div>
+
+</div>
+
 </div>
 </body>
+<script>
+    function next(){
+        document.location="http://127.0.0.1:8887/02.html"
+    }
+</script>
 </html>

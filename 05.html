@@ -24,11 +24,10 @@
             margin: 25px;
             width: 100px;
             height: 30px;
-            background-color: rgb(243, 75, 75);
+            background-color: rgb(138, 138, 138);
             color: #fff;
             font-weight: bold;
             border-radius: 10px;
-            border: 2px solid rgb(224, 154, 154);
             box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
             transition: 0.3s;
         }
@@ -36,15 +35,82 @@
         .scroll:hover {
             border: 2px solid #000;
         }
-        .content{
+
+        .scroll:focus {
+            outline: none;
+        }
+
+        .wrap {
+            width: 900px;
+            margin: auto;
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .item-5 {
+            background-color: #eee;
+            width: 270px;
+            margin: 15px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .item-5:hover {
+            transform: translateY(-20px);
+            background-color: rgb(88, 88, 88);
+            color: #fff;
+        }
+
+        .item-5:hover .item-txt::before {
+            border-left: 135px solid rgb(88, 88, 88);
+            border-right: 135px solid rgb(88, 88, 88);
+        }
+
+        .item-5 img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item-5 h2 {
+            border-bottom: 2px solid #ccc;
+
+
+
+        }
+
+        .item-5 p {
+            line-height: 1.5;
+            padding: 10px;
+        }
+
+        .item-txt {
+            position: relative;
+            padding: 10px;
+        }
+
+        .item-txt::before {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 135px solid #eee;
+            border-right: 135px solid #eee;
+            transform: translateY(-100%);
+            transition: .3s;
+        }
+        
+        /* .content{
             width: 500px;
             
             
         }
         .content img{
             width: 500px;
-        }
-        @media screen and (max-width:768px){
+        } */
+        /* @media screen and (max-width:768px){
             .select-btn{
                 width: 100%;
                 
@@ -60,7 +126,7 @@
             .content {
                 width: 100%; 
             }
-        }
+        } */
     </style>
 </head>
 
@@ -75,31 +141,44 @@
     <div class="container">
         <div class="select">
             <div class="select-btn">
-                <button onclick="getData()" id="scroll-1" class="scroll">春聯一</button>
-                <button id="scroll-2" class="scroll">春聯二</button>
-                <button id="scroll-3" class="scroll">春聯三</button>
-                <button id="scroll-4" class="scroll">春聯四</button>
+                <button onclick="getData()" id="btn-1" class="scroll">人員介紹</button>
+                <button onclick="getMap()" id="btn-2" class="scroll">關於我們</button>
+                <button id="btn-3" class="scroll">產品介紹</button>
+                <button id="btn-4" class="scroll">其他項目</button>
             </div>
         </div>
-        <div class="box">
-        <div id="scr-img" class="content">
-        </div>
+
+        <div id="container" class="content-5">
+            
         </div>
     </div>
 </body>
 <script>
-    function getData(){
+    function getData() {
         //XMLHttpRequest物件專門用來跟伺服器連線
         var req = new XMLHttpRequest()
-        req.open("get","http://127.0.0.1:8887/ajaxtestimg.html")
-        req.onload=function(){
-            var content=document.getElementById("scr-img")
-            content.innerHTML=this.response;
+        req.open("get", "http://127.0.0.1:8887/ajaxtest.html")
+        req.onload = function () {
+            var content = document.getElementById("container")
+            content.innerHTML = this.response;
         }
         req.send();
     }
 
+    function getMap() {
+        //XMLHttpRequest物件專門用來跟伺服器連線
+        var req = new XMLHttpRequest()
+        req.open("get", "http://127.0.0.1:8887/intro.html")
+        req.onload = function () {
+            var content = document.getElementById("container")
+            content.innerHTML = this.response;
+        }
+        req.send();
+    }
+    
+
 
 </script>
+
 
 </html>

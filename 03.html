@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .full-screen{
+        .full-screen {
             position: fixed;
             top: 0px;
             left: 0px;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,.5);
+            background-color: rgba(0, 0, 0, .5);
         }
-        .ad img{
+
+        .ad img {
             width: 400px;
             opacity: .8;
             position: fixed;
             bottom: 0px;
             left: 0px;
             transition: 0.5s;
-            
+
         }
+
         /* .ad img:hover{
             opacity: 1;
         } */
-        .ad{
+        .ad {
             width: 100%;
             position: relative;
             border: 5px solid #000000;
         }
-        .ad .tab{
+
+        .ad .tab {
             color: #fff;
             text-align: center;
             border-radius: 100%;
@@ -46,7 +50,12 @@
             left: 390px;
             z-index: 1;
         }
-        .content-btn{
+
+        .ad .tab:focus {
+            outline: none;
+        }
+
+        .content-btn {
             width: 150px;
             height: 25px;
             margin: 20px;
@@ -55,13 +64,24 @@
             border-radius: 20px;
             font-weight: bold;
         }
-        .hide{
+
+        .hide {
             display: none;
-            
+
         }
-       
+
+        #map {
+            margin: auto;
+            width: 700px;
+            height: 400px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
     </style>
 </head>
+
 <body>
     <nav class="navori">
         <a href="01.html">P1</a>
@@ -70,85 +90,99 @@
         <a href="04.html">P4</a>
         <a href="05.html">P5</a>
     </nav>
-    <div class="title">第三頁</div>
-   
+
+
     <div class="box">
-    <div class="column">
-        Lorem ipsum dolor sit amet, 
-        consectetur adipisicing elit. 
-        Repudiandae ut alias, voluptatem possimus 
-        soluta esse, tempore reprehenderit 
-        repellat odit ratione iure! Deleniti nesciunt 
-        non enim exercitationem minima magnam quo 
-        sapiente.
+        <div class="column">
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.
+            Repudiandae ut alias, voluptatem possimus
+            soluta esse, tempore reprehenderit
+            repellat odit ratione iure! Deleniti nesciunt
+            non enim exercitationem minima magnam quo
+            sapiente.
+        </div>
+        <div class="column">
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.
+            Repudiandae ut alias, voluptatem possimus
+            soluta esse, tempore reprehenderit
+            repellat odit ratione iure! Deleniti nesciunt
+            non enim exercitationem minima magnam quo
+            sapiente.
+        </div>
+        <div class="column">
+
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.
+            Repudiandae ut alias, voluptatem possimus
+            soluta esse, tempore reprehenderit
+            repellat odit ratione iure! Deleniti nesciunt
+            non enim exercitationem minima magnam quo
+            sapiente.
+        </div>
     </div>
-    <div class="column">
-        Lorem ipsum dolor sit amet, 
-        consectetur adipisicing elit. 
-        Repudiandae ut alias, voluptatem possimus 
-        soluta esse, tempore reprehenderit 
-        repellat odit ratione iure! Deleniti nesciunt 
-        non enim exercitationem minima magnam quo 
-        sapiente.
-     </div> 
-    <div class="column">
-    
-        Lorem ipsum dolor sit amet, 
-        consectetur adipisicing elit. 
-        Repudiandae ut alias, voluptatem possimus 
-        soluta esse, tempore reprehenderit 
-        repellat odit ratione iure! Deleniti nesciunt 
-        non enim exercitationem minima magnam quo 
-        sapiente.
+    <div class="content">
+        <button class="content-btn" onclick="toggleMenu(1)">CONTENT-1</button>
+        <ul id="menu-1" class="menu-1">
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio
+                voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima
+                nihil ipsam iusto.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio
+                voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima
+                nihil ipsam iusto.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        </ul>
+
     </div>
-</div>
-<div class="content">
-    <button  class="content-btn" onclick="toggleMenu(1)">CONTENT-1</button>
-    <ul id="menu-1" class="menu-1">
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-    </ul>
-   
-</div>
-<div class="content">
-    <button  class="content-btn" onclick="toggleMenu(2)">CONTENT-2</button>
-    <ul id="menu-2" class="menu-2">
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-    </ul>
-   
-</div>
-<div class="content">
-    <button  class="content-btn" onclick="toggleMenu(3)">CONTENT-3</button>
-    <ul id="menu-3" class="menu-3">
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima nihil ipsam iusto.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-    </ul>
-   
-</div>
-<div id="ad" class="ad" >
-    <div class="full-screen">
-    
-    
-    <button  class="tab"  onClick="closeAd()" type="button">X</button>
-    <img onmouseover="opa(this)" onmouseout="out(this)" src="https://static.accupass.com/userupload/afac6f3628dd4977a97cc8aca24a175b.jpg" alt="">
+    <div class="content">
+        <button class="content-btn" onclick="toggleMenu(2)">CONTENT-2</button>
+        <ul id="menu-2" class="menu-2">
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio
+                voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima
+                nihil ipsam iusto.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio
+                voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima
+                nihil ipsam iusto.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        </ul>
+
     </div>
-</div>
+    <div class="content">
+        <button class="content-btn" onclick="toggleMenu(3)">CONTENT-3</button>
+        <ul id="menu-3" class="menu-3">
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio
+                voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima
+                nihil ipsam iusto.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quo tempora, aliquid optio
+                voluptas maxime sequi, odio laboriosam, consectetur accusamus ad exercitationem ipsam eius! Non minima
+                nihil ipsam iusto.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        </ul>
+
+    </div>
+    <div id="map"></div>
+    <div id="ad" class="ad">
+        <div class="full-screen">
+
+
+            <button class="tab" onClick="closeAd()" type="button">X</button>
+            <img onmouseover="opa(this)" onmouseout="out(this)"
+                src="https://static.accupass.com/userupload/afac6f3628dd4977a97cc8aca24a175b.jpg" alt="">
+        </div>
+    </div>
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    // Jquery寫法
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        // Jquery寫法
 
-    // $(document).ready(function(){
-    //     $('.tab').click(function(){
-    //         $('.ad').fadeOut();
-    //     })                          
-    // })  
+        // $(document).ready(function(){
+        //     $('.tab').click(function(){
+        //         $('.ad').fadeOut();
+        //     })                          
+        // })  
 
 
         // $(document).ready(function(){ 
@@ -158,24 +192,43 @@
         // })
 
 
-    // JavaScript寫法
+        // JavaScript寫法
 
-    function opa(element){
-        element.style.opacity="1"
-    }
-    function out(element){
-        element.style.opacity=".8"
-    }
-    function toggleMenu(number){
-        var menu = document.getElementById("menu-"+number)
-        menu.classList.toggle("hide")
+        function opa(element) {
+            element.style.opacity = "1"
+        }
+        function out(element) {
+            element.style.opacity = ".8"
+        }
+        function toggleMenu(number) {
+            var menu = document.getElementById("menu-" + number)
+            menu.classList.toggle("hide")
 
-    }
-    function closeAd(){
-    var close = document.getElementById("ad")        
-    close.style.display="none";
-    }
-    </script>                       
+        }
+        function closeAd() {
+            var close = document.getElementById("ad")
+            close.style.display = "none";
+        }
+
+
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 25.0335639, lng: 121.5239223 },
+                zoom: 5,
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: 25.0335639, lng: 121.5239223 },
+                map: map
+            });
+        }
+
+    </script>
 
 </body>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOKrDmwjENRaYqkJjwbqld1FCr-89FIOk&callback=initMap"></script>
+
+
 </html>
